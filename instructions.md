@@ -15,3 +15,18 @@ object is created. The render method gets called automatically every time the st
 inside of the component and anytime the value of the component's props changes.
 
 This exercise will help you practice what you've learned in the course so far, including the trickiest part of React - managing state.
+
+
+### 使い方
+ダミーデータの入ったスターターテンプレートが渡されます。
+
+**タスク**：X+Y+Z=P という形の方程式を表示するゲームを作ります。ここで、X, Y, Z は乱数、P は提案された答えとします。
+ユーザーは、X, Y, Z の合計が提案された答え P に等しいことが真であるかどうかを答えることができなければならない。得点はこのような形式で表示されます。
+[正解数]/[回答数]です。ユーザーが質問に答えるたびに、ランダムに生成された数字を使った新しい質問が表示されます。
+
+コンポーネントのコンストラクタは、オブジェクトが作成されたときに最初に実行されることを覚えておいてください。
+renderメソッドは、コンポーネントの内部で状態が変化するたびに、またコンポーネントのpropsの値が変化するたびに、自動的に呼び出されます。
+
+この演習は、Reactの最も厄介な部分である状態の管理を含め、これまでのコースで学んだことを実践するのに役立ちます。
+
+www.DeepL.com/Translator（無料版）で翻訳しました。
