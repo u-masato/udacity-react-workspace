@@ -7,7 +7,12 @@ class UserList extends Component {
     render() {
         const {users} = this.props;
         return <div>
-            <ol>{users.map(user => {return <User key={user.userName} user={user}/>})}</ol>
+            <h1>Users</h1>
+            <ol>
+                {users.map(user => (
+                    <User key={user.userName} user={user}/>
+                ))}
+            </ol>
         </div>
     }
 }
