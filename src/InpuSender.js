@@ -13,14 +13,13 @@ class InputSender extends Component {
         })
     }
 
-    send = (e, username, handler) => {
+    onSend = (e) => {
         e.preventDefault();
-        e.stopPropagation();
         const message = {
-            username: username,
+            username: this.props.username,
             text: this.state.text,
         }
-        handler(message);
+        this.props.sendHandler(message);
     }
 
     isDisabled = () => {
@@ -32,13 +31,12 @@ class InputSender extends Component {
 
         return (
             <div>
-                <form className="input-group">
+                <form onSubmit={this.onSend} className="input-group">
                     <input type="text" className="form-control" placeholder="Enter your message..."
                            value={this.state.text} onChange={this.changeText}
                     />
                     <div className="input-group-append">
-                        <button className="btn submit-button" disabled={this.isDisabled()}
-                                onClick={(e) => this.send(e, username, sendHandler)}>
+                        <button className="btn submit-button" disabled={this.isDisabled()}>
                             SEND
                         </button>
                     </div>
